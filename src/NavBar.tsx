@@ -47,8 +47,8 @@ const NavBar: FC<NavbarProps> = ({ cartCount, setUser, isLoggedIn }) => {
     <div className="py-4 bg-white">
       <div className="flex justify-between max-w-6xl mx-auto item-center">
         <img
-          className="hidden h-9 w-28 md:block "
-          src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+          className="hidden h-12 w-30 md:block "
+          src="https://cdn.discordapp.com/attachments/910152020034486282/1092414192071475351/1680522228867.jpg"
         />
 
         <div>
@@ -102,8 +102,8 @@ const NavBar: FC<NavbarProps> = ({ cartCount, setUser, isLoggedIn }) => {
             <div>
               
               <img
-                className="h-9 w-28 md:hidden "
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+                className=" pb-2 h-12 w-30 md:hidden object-cover "
+                src="https://cdn.discordapp.com/attachments/910152020034486282/1092414192071475351/1680522228867.jpg"
               />
             </div>
           </div>
