@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, ReactNode } from "react";
+import { ChangeEvent,InputHTMLAttributes, FC, ReactNode } from "react";
 
 type InputProps = {
   name?: string;
@@ -18,9 +18,11 @@ type InputProps = {
   placeholder?: string;
   size?: "small" | "medium" | "large";
   border?: "primary" | "secondary" | "tertiary";
-};
+  className?: string
+  
+} 
 
-const Input: FC<InputProps> = ({
+const Input: FC<InputProps > = ({
   name,
   border,
   label,
@@ -47,7 +49,7 @@ const Input: FC<InputProps> = ({
     borderClass = "border-2 border-primary-default ";
   }
 
-  let sizeMap = "";
+  let sizeMap = '';
   switch (size) {
     case "small":
       sizeMap = "w-md";
@@ -58,6 +60,8 @@ const Input: FC<InputProps> = ({
     case "large":
       sizeMap = "w-full";
       break;
+      default:
+    sizeMap = "w-md";    
   }
 
   return (
@@ -65,10 +69,10 @@ const Input: FC<InputProps> = ({
       <label htmlFor={id} className="sr-only">
         {label}
       </label>
-      <input
+      <Input
         id={id}
         name={name}
-        className={`relative block pl-3  h-12 text-gray-800  bg-white border  appearance-none focus:z-10 focus-outline-none ${sizeMap} ${borderClass}`}
+        className={`relative block pl-3  h-12 text-gray-800  bg-white border  appearance-none focus:z-10 focus-outline-none ${sizeMap ?? ''} ${borderClass}`}
         {...rest}
       />
       {touched && errors && (

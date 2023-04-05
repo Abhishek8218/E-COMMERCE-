@@ -5,7 +5,9 @@ import { getCart, getProductsByIds, saveCart } from "../Api";
 import { CartContext } from "../Contexts";
 import { withUser } from "../withProvider";
 type CartProvicerProps = { isLoggedIn: boolean; children: any };
-
+type QuantityMap = {
+  [key: number]: number;
+};
 const CartProvider: FC<CartProvicerProps> = ({ isLoggedIn, children }) => {
   const [cart, setCart] = useState([]);
 
@@ -30,7 +32,8 @@ const CartProvider: FC<CartProvicerProps> = ({ isLoggedIn, children }) => {
 
   function quantityMapToCart(quantityMap: any) {
     console.log("quantityMap", quantityMap);
-    getProductsByIds(Object.keys(quantityMap)).then(function (products) {
+    const productIds = Object.keys(quantityMap).map(Number);
+    getProductsByIds(productIds).then(function (products) {
       const savedCart = products.map((p: any) => ({
         product: p,
         quantity: quantityMap[p.id],
@@ -41,7 +44,7 @@ const CartProvider: FC<CartProvicerProps> = ({ isLoggedIn, children }) => {
 
   function addToCart(productId: number, count: number) {
     const quantityMap = cart.reduce(
-      (m, cartItem: any) => ({
+      (m: QuantityMap, cartItem: any) => ({
         ...m,
         [cartItem.product.id]: cartItem.quantity,
       }),

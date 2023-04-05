@@ -33,7 +33,7 @@ const ProductPage: FC<ProductPageProps> = ({
   const params = Object.fromEntries([...searchParams]);
 
   let { query, sort } = params;
-  let page: string | number = params.page;
+  let page:number=Number(params.page);
 
   query = query || "";
   sort = sort || "default";
@@ -48,7 +48,7 @@ const ProductPage: FC<ProductPageProps> = ({
 
   useEffect(
     function () {
-      let sortType;
+      let sortType: any;
       let sortBy: any;
 
       if (sort == "title") {
