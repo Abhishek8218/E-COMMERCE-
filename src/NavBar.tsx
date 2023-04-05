@@ -12,6 +12,7 @@ type NavbarProps = {
   isLoggedIn: boolean;
 };
 
+    
 const NavBar: FC<NavbarProps> = ({ cartCount, setUser, isLoggedIn }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   function handleMenuOpenClick() {
@@ -28,12 +29,12 @@ const NavBar: FC<NavbarProps> = ({ cartCount, setUser, isLoggedIn }) => {
     {
       id: 2,
       link: "About",
-      Route: "/",
+      Route: "/about",
     },
     {
       id: 3,
       link: "Contact",
-      Route: "contact",
+      Route: "/contact",
     },
   
   ];
@@ -42,9 +43,10 @@ const NavBar: FC<NavbarProps> = ({ cartCount, setUser, isLoggedIn }) => {
     localStorage.removeItem("token");
     setUser(undefined);
   };
+ 
 
   return (
-    <div className="py-4 bg-white">
+    <div className="py-3 px-2 mb-2 h-18 bg-white border-4 border-y-orange-300 sticky top-0">
       <div className="flex justify-between max-w-6xl mx-auto item-center">
         <img
           className="hidden h-12 w-30 md:block "
@@ -63,7 +65,10 @@ const NavBar: FC<NavbarProps> = ({ cartCount, setUser, isLoggedIn }) => {
         <div className="flex gap-4">
           {links.map(({ link, id, Route }) => (
             <div key={id} className="hidden space-x-4 text-xl md:block ">
-              <Link className={"hover:text-primary-dark "} to={Route}>
+              <Link className="hover:text-primary-dark "
+   
+                
+                to={Route}>
                 {link}
               </Link>
             </div>
@@ -89,9 +94,9 @@ const NavBar: FC<NavbarProps> = ({ cartCount, setUser, isLoggedIn }) => {
             <div>
             
               <Link to="/cart">
-                <div className="flex flex-col items-center justify-center hidden sm:block ">
-                  <BsCart className="pb-1 text-4xl text-primary-default hover:text-primary-dark" />
-                  <span className="-m-8 text-primary-default hover:text-primary-dark">
+                <div className="relative hidden sm:block ">
+                  <BsCart className=" text-4xl text-primary-default hover:text-primary-dark" />
+                  <span className=" absolute top-0 right-0 inline-flex items-center justify-center px-3 py-1  text-primary-default hover:text-primary-dark">
                     {cartCount}
                   </span>
                 </div>

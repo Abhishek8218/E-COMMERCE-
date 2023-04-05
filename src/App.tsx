@@ -13,10 +13,10 @@ import AlertProvider from "./Provider/AlertProvider";
 import CartProvider from "./Provider/CartProvider";
 import Contact from "./Contact";
 import Details from "./Details";
-
+import About from "./About";
 function App() {
   return (
-    <div className="flex flex-col h-screen p-2 overflow-scroll bg-gray-default">
+    <div className="flex flex-col h-screen  overflow-scroll bg-gray-default">
       <UserProvider>
         <CartProvider>
           <AlertProvider>
@@ -32,7 +32,10 @@ function App() {
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/signup" element={<SignUp />} />
-                <Route path="/forgot" element={<ForgotPassword />} />
+                <Route path="/forgot" element={<ForgotPassword />}
+                 />
+                <Route path="about" element={<About/>} />
+                
                </Routes>
             </div>
           <Footer />
