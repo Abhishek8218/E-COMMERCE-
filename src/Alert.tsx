@@ -14,9 +14,9 @@ const themeMap = {
     Icon: GoAlert,
   },
 };
-
+type AlertType = "success" | "error";
 type AlertProps = {
-  alert: { message: string; type: string };
+  alert: { message: string; type: AlertType };
   handleAlertRemove: any;
 };
 

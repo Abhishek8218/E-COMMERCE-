@@ -5,9 +5,11 @@ import { withCart } from "./withProvider";
 import Loading from "./Loading";
 
 type CartListProps = { cart : any[]; updateCart: Function };
-
+type QuantityMap = {
+  [key:number] : number;
+};
 const CartList: FC<CartListProps> = ({ cart, updateCart }) => {
-  const [quantityMap, setQuantityMap] = useState({});
+  const [quantityMap, setQuantityMap] = useState<QuantityMap>({});
 
   const [loading, setLoading] = useState(true);
 

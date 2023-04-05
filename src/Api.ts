@@ -68,7 +68,7 @@ export function saveCart(cart: {}) {
       { data: cart },
       {
         headers: {
-          Authorization: localStorage.getItem("token"),
+          Authorization: localStorage.getItem("token") ?? '',
         },
       }
     )
@@ -81,7 +81,7 @@ export function getCart() {
   return axios
     .get("https://myeasykart.codeyogi.io/carts", {
       headers: {
-        Authorization: localStorage.getItem("token"),
+        Authorization: localStorage.getItem("token") ?? '',
       },
     })
     .then(function (response) {
