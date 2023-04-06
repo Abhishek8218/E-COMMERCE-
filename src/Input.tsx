@@ -1,4 +1,4 @@
-import { ChangeEvent,InputHTMLAttributes, FC, ReactNode } from "react";
+import { ChangeEvent,HTMLInputTypeAttribute, FC, FocusEventHandler,ChangeEventHandler,ReactNode } from "react";
 
 type InputProps = {
   name?: string;
@@ -8,30 +8,32 @@ type InputProps = {
   handleSubmit?: HTMLFormElement;
   values?: string;
   errors?: ReactNode;
-  onChange?: ChangeEvent<Element>;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
   handleBlur?: { email: string; password: string };
   isLoggedIn?: boolean;
-  onBlur?: React.ChangeEvent<Element>;
-  type?: string | number;
+  onBlur?: FocusEventHandler<HTMLInputElement>;
+  type?: "text" | "password" | "email" | "number" | "search" | "tel" | "url" | "date" | "time" | "datetime-local";
+// Changed type to HTMLInputTypeAttribute;  //Changed type to HTMLInputTypeAttribute
   required?: boolean;
   autoComplete?: string;
   placeholder?: string;
   size?: "small" | "medium" | "large";
   border?: "primary" | "secondary" | "tertiary";
-  
+  className?:String;
   
 } 
 
-const Input: FC<InputProps > = ({
+const Input = ({
   name,
   border,
   label,
   id,
   touched,
   size,
+className,
   errors,
   ...rest
-}) => {
+}: InputProps) => {
   let borderClass = "";
   switch (border) {
     case "primary":
@@ -72,7 +74,7 @@ const Input: FC<InputProps > = ({
       <input
         id={id}
         name={name}
-        className={`relative block pl-3  h-12 text-gray-800  bg-white border  appearance-none focus:z-10 focus-outline-none ${sizeMap ?? ''} ${borderClass}`}
+        className={`relative block pl-3  h-12 text-gray-800  bg-white border  appearance-none focus:z-10 focus-outline-none ${sizeMap ?? ''} ${borderClass} ${className}`}
         {...rest}
       />
       {touched && errors && (
