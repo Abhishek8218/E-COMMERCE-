@@ -70,7 +70,7 @@ export const LoginPage: FC<LoginPageProps> = ({
   
 
   return (
-    <div className="h-full max-w-6xl mx-auto mt-16 text-2xl bg-white ">
+    <div className="h-full max-w-6xl mx-auto mt-16 text-2xl bg-white z-0 ">
       <form
         onSubmit={handleSubmit}
         className="max-w-5xl px-4 py-5 mx-2 space-y-8 bg-white md:mx-auto md:py-8"

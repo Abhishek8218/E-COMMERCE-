@@ -13,13 +13,13 @@ type InputProps = {
   isLoggedIn?: boolean;
   onBlur?: FocusEventHandler<HTMLInputElement>;
   type?: "text" | "password" | "email" | "number" | "search" | "tel" | "url" | "date" | "time" | "datetime-local";
-// Changed type to HTMLInputTypeAttribute;  //Changed type to HTMLInputTypeAttribute
+
   required?: boolean;
   autoComplete?: string;
   placeholder?: string;
   size?: "small" | "medium" | "large";
   border?: "primary" | "secondary" | "tertiary";
-  className?:String;
+  className?:string;
   
 } 
 
@@ -74,7 +74,7 @@ className,
       <input
         id={id}
         name={name}
-        className={`relative block pl-3  h-12 text-gray-800  bg-white border  appearance-none focus:z-10 focus-outline-none ${sizeMap ?? ''} ${borderClass} ${className}`}
+        className={`relative block pl-3  h-12 text-gray-800  bg-white border  appearance-none  focus-outline ${sizeMap ?? ''} ${borderClass} ${className}`}
         {...rest}
       />
       {touched && errors && (

@@ -59,7 +59,7 @@ const NavBar: FC<NavbarProps> = ({ cartCount, setUser, isLoggedIn }) => {
             size={30} 
           />}
             </div>
-          {isMenuOpen && <MobileMenu className="md:hidden " />}
+          {isMenuOpen && <MobileMenu className="md:hidden fixed" />}
         </div>
 
         <div className="flex gap-4">

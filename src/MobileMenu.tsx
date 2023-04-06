@@ -16,7 +16,7 @@ const MobileMenu: FC<MobileMenuProps> = ({setUser, isLoggedIn, cartCount }) => {
 
   return (
     <div className="">
-      <div className="absolute flex flex-col justify-center mt-10 space-y-4 h-screen w-1/2 pl-12 bg-orange-500 text-white text-3xl rounded-sm md:hidden">
+      <div className=" absolute flex flex-col justify-center mt-10 space-y-4 h-screen w-1/2 pl-12 bg-orange-500 text-white text-3xl rounded-sm md:hidden ">
         <Link
           to="/"
           className="font-bold  hover:text-white underline"
