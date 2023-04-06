@@ -35,7 +35,7 @@ const schema = Yup.object().shape({
   password: Yup.string()
     .required()
     .min(8, "dont you know its really small")
-    .max(14, "very bada password"),
+    .max(14, "too long password"),
 });
 
 const initialValues = {

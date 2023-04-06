@@ -18,7 +18,7 @@ type InputProps = {
   placeholder?: string;
   size?: "small" | "medium" | "large";
   border?: "primary" | "secondary" | "tertiary";
-  className?: string
+  
   
 } 
 
@@ -69,7 +69,7 @@ const Input: FC<InputProps > = ({
       <label htmlFor={id} className="sr-only">
         {label}
       </label>
-      <Input
+      <input
         id={id}
         name={name}
         className={`relative block pl-3  h-12 text-gray-800  bg-white border  appearance-none focus:z-10 focus-outline-none ${sizeMap ?? ''} ${borderClass}`}

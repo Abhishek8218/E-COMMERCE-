@@ -25,7 +25,7 @@ const MobileMenu: FC<MobileMenuProps> = ({setUser, isLoggedIn, cartCount }) => {
         </Link>
         
         <Link
-          to="/"
+          to="about"
           className="font-bold   hover:text-white underline "
         >
           About

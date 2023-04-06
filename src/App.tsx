@@ -29,12 +29,12 @@ function App() {
                 <Route path="/Products/:id" element={<Details />} />
                 <Route path="*" element={<NotFound />} />
                 <Route path="/cart" element={<CartPage />} />
-                <Route path="/Contact" element={<Contact />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/forgot" element={<ForgotPassword />}
                  />
-                <Route path="about" element={<About/>} />
+                <Route path="/about" element={<About/>} />
                 
                </Routes>
             </div>

@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-export const loginUserContext = createContext<any | null>(null);
-export const Alertcontext = createContext<any | null>(null);
-export const CartContext = createContext<any | null>(null);
+export const loginUserContext = createContext();
+export const Alertcontext = createContext();
+export const CartContext = createContext(); 
