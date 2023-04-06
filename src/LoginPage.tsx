@@ -1,10 +1,10 @@
 
 
-import { FC } from "react";
+import { FC,ChangeEventHandler,FocusEventHandler ,} from "react";
 import { withFormik } from "formik";
 import Button from "./Button";
 import * as Yup from "yup";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, } from "react-router-dom";
 import Input from "./Input";
 import axios from "axios";
 import { withAlert, withUser } from "./withProvider";
@@ -48,8 +48,8 @@ type LoginPageProps = {
   values: { email: string; password: string };
   errors: { email: string; password: string };
   touched: any;
-  handleChange: React.ChangeEvent;
-  handleBlur: React.ChangeEvent;
+  handleChange: ChangeEventHandler<HTMLInputElement>;
+  handleBlur: FocusEventHandler<HTMLInputElement>;
   isLoggedIn: boolean;
 };
 

@@ -1,5 +1,5 @@
 
-import { FC } from "react";
+import { FC, FocusEventHandler,ChangeEventHandler} from "react";
 import { withFormik } from "formik";
 import Button from "./Button";
 import * as Yup from "yup";
@@ -49,8 +49,8 @@ type SignupProps = {
   values: any;
   errors: any;
   touched: any;
-  handleChange: React.ChangeEvent;
-  handleBlur: React.ChangeEvent;
+  handleChange: ChangeEventHandler<HTMLInputElement>;
+  handleBlur: FocusEventHandler<HTMLInputElement>;
   isLoggedIn: boolean;
 };
 
