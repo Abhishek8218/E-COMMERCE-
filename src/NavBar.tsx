@@ -74,20 +74,20 @@ const NavBar: FC<NavbarProps> = ({ cartCount, setUser, isLoggedIn }) => {
             </div>
           ))}
           {isLoggedIn ? (
-            <a
-              href="login"
+            <Link
+              to="/login"
               onClick={handleLogout}
               className="hidden text-xl font-bold md:block hover:text-primary-light text-primary-dark"
             >
               Logout
-            </a>
+            </Link>
           ) : (
-            <a
-              href="login"
+            <Link
+              to="/login"
               className="hidden text-xl font-bold md:block hover:text-primary-light text-primary-dark"
             >
               Login
-            </a>
+            </Link>
           )}
 
             <div className="flex gap-4">
