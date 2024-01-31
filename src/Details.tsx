@@ -73,7 +73,7 @@ function () {
         </div>
         <div className="flex flex-col sm:flex-row sm:p-10 bg-white rounded-md shadow-lg">
           <div className="p-6 w-full h-full">
-            <img src={product.thumbnail} />
+            <img src={product.thumbnail} alt="Product Image" />
           </div>
           <div className="self-center p-4">
             <div className="font-bold text-5xl mb-6 px-2">{product.title}</div>
