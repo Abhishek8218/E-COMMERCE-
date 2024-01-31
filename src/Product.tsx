@@ -24,6 +24,7 @@ const Product: FC<ProductProps> = ({
             <img
               className="object-cover w-full h-full hover:rounded-md hover:scale-105"
               src={thumbnail}
+              alt="Product Image"
             />
           </div>
           <div className="pl-1">
