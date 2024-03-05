@@ -65,7 +65,7 @@ const NavBar: FC<NavbarProps> = ({ cartCount, setUser, isLoggedIn }) => {
         <div className="flex gap-4">
           {links.map(({ link, id, Route }) => (
             <div key={id} className="hidden space-x-4 text-xl md:block ">
-              <Link className="hover:text-primary-dark "
+              <Link className="hover:text-red-400 "
    
                 
                 to={Route}>
