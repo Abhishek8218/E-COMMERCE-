@@ -22,7 +22,7 @@ const Product: FC<ProductProps> = ({
         <div className="w-full h-full shadow-2xl shadow-black">
           <div className=" aspect-square">
             <img
-              className="object-cover w-full h-full hover:rounded-md hover:scale-105"
+              className="object-cover w-full h-full transition ease-in-out duration-300  hover:rounded-md hover:scale-105"
               src="https://img.freepik.com/free-vector/images-concept-illustration_114360-218.jpg?t=st=1709635714~exp=1709639314~hmac=99eae90e50db74aa797fe5cdd63d26f454b81bc67011c34c548ba9aab4fa73cf&w=740"
              // onError="this.onerror=null;this.src='https://img.freepik.com/free-vector/images-concept-illustration_114360-218.jpg?t=st=1709635714~exp=1709639314~hmac=99eae90e50db74aa797fe5cdd63d26f454b81bc67011c34c548ba9aab4fa73cf&w=740';"
               alt="Product Image"
