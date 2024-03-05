@@ -24,6 +24,7 @@ const Product: FC<ProductProps> = ({
             <img
               className="object-cover w-full h-full hover:rounded-md hover:scale-105"
               src={thumbnail}
+              onerror="this.onerror=null;this.src='https://img.freepik.com/free-vector/images-concept-illustration_114360-218.jpg?t=st=1709635714~exp=1709639314~hmac=99eae90e50db74aa797fe5cdd63d26f454b81bc67011c34c548ba9aab4fa73cf&w=740';"
               alt="Product Image"
             />
           </div>
