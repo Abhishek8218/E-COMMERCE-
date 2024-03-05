@@ -49,7 +49,7 @@ const NavBar: FC<NavbarProps> = ({ cartCount, setUser, isLoggedIn }) => {
     <div className="py-3 px-2 mb-2 h-18 bg-white border-4 border-y-orange-300 sticky top-0">
       <div className="flex justify-between max-w-6xl mx-auto item-center">
         <img
-          className="hidden h-12 w-30 md:block "
+          className="hidden h-12 w-30 md:block rounded-md "
           src="https://cdn.discordapp.com/attachments/910152020034486282/1092412419319533628/IMG_20230403_170639.jpg?ex=65f82758&is=65e5b258&hm=4456562c3b02c64daf57e24fbf6fc565f7f0711e969d054bbb17713190142a50&"
         />
 
